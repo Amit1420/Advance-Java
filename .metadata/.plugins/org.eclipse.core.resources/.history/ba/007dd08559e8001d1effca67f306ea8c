@@ -1,0 +1,64 @@
+package com.amit.k2.controller;
+
+import java.sql.Date;
+import java.util.List;
+
+import com.amit.k2.dto.Admin;
+import com.amit.k2.dto.Visitor;
+import com.amit.k2.repository.AdminDAOImp;
+import com.amit.k2.repository.VisitorDAOImp;
+import com.amit.k2.service.VisitorServiceImp;
+
+public class Controller {
+	public static void main(String[] args) {
+//		Admin admin = new Admin();
+//		admin.setId(1);
+//		admin.setUserName("amit1420");
+//		admin.setPassword("Misti@143");
+//		
+//		AdminDAOImp daoImp = new AdminDAOImp();
+//		daoImp.saveAdmin(admin);
+//		
+//		daoImp.adminLogin("amit","Misti");
+		
+//		Visitor visitor = new Visitor();
+//		visitor.setAddress("Bokaro");
+//		visitor.setAge(20);
+//		visitor.setEmail("anmol80999@gmail.com");
+//		visitor.setGender("Male");
+//		visitor.setName("Anmol");
+//		visitor.setPassword("Anmol@123");
+//		visitor.setPhoneNo("9973569804");
+//		visitor.setId(2);
+//		visitor.setDob(Date.valueOf("1998-10-29"));
+//		
+//		
+//		VisitorDAOImp visitorDAOImp = new VisitorDAOImp();
+//	    
+//		visitorDAOImp.saveVisitor(visitor);		
+//		
+//		List<Visitor> list = visitorDAOImp.getAllRegisteredVisitor();
+//		if(list!=null)
+//			list.forEach(System.out::println);
+//		else System.out.println("No visitor data found in DB");	
+//		
+//	    visitorDAOImp.visitorLogin("amitkumar80999@gmail.com","Amit@123");
+//	    
+//	    Visitor validVisitorById = visitorDAOImp.getValidVisitorById(1);
+//	    System.out.println(validVisitorById);
+	    
+	    VisitorServiceImp imp = new VisitorServiceImp();
+	    List<Visitor> sortByAge = imp.sortRegisteredVisitorsByAge();
+	    if(sortByAge!=null)
+			sortByAge.forEach(System.out::println);
+		else System.out.println("No visitor data found in DB");	
+	    
+//		Visitor deleteVisitor = visitorDAOImp.deleteVisitor(1);
+//		System.out.println(deleteVisitor);
+		
+		
+		
+		
+	}
+
+}

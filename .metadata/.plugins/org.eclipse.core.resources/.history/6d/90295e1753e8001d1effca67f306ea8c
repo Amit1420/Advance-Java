@@ -1,0 +1,21 @@
+package com.amit.k2.controller;
+
+import com.amit.k2.dto.Admin;
+import com.amit.k2.repository.AdminDAOImp;
+
+public class Controller {
+	public static void main(String[] args) {
+		Admin admin = new Admin();
+		admin.setId(1);
+		admin.setUserName("amit1420");
+		admin.setPassword("Misti@143");
+		
+		AdminDAOImp daoImp = new AdminDAOImp();
+		daoImp.saveAdmin(admin);
+		
+		daoImp.adminLogin(admin.getUserName(), admin.getPassword());
+		
+		
+	}
+
+}

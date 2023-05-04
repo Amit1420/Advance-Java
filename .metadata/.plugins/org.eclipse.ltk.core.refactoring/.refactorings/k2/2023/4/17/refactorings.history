@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.amit.k2.entity&apos; to &apos;com.amit.k2.dto&apos;&#x0D;&#x0A;- Original project: &apos;k2&apos;&#x0D;&#x0A;- Original element: &apos;k2/src/main/java/com.amit.k2.entity&apos;&#x0D;&#x0A;- Renamed element: &apos;k2/src/main/java/com.amit.k2.dto&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.amit.k2.entity&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.amit.k2.entity" name="com.amit.k2.dto" qualified="false" references="true" stamp="1682753959406" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,13 @@
+package com.amit.dynamiccrudoperation;
+
+public class TestDAO {
+
+	public static void main(String[] args) {
+		Student s = new Student(102,"Suman","suman@gmail.com","Python");
+		StudentDAO dao = new StudentDAO();
+		System.out.println(dao.saveStudent(s));
+		
+
+	}
+
+}

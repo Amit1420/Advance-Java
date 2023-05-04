@@ -1,0 +1,15 @@
+package com.amit.k2.controller;
+
+import com.amit.k2.dto.Visitor;
+import com.amit.k2.repository.VisitorDAOImp;
+
+public class Controller {
+	public static void main(String[] args) {
+		Visitor visitor = new Visitor();
+		VisitorDAOImp daoImp = new VisitorDAOImp();
+		daoImp.saveVisitor(visitor);
+		
+		
+	}
+
+}

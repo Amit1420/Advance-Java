@@ -1,0 +1,113 @@
+package com.amit.k2.service;
+
+import java.util.List;
+
+import com.amit.k2.dto.Visitor;
+import com.amit.k2.repository.VisitorDAO;
+import com.amit.k2.repository.VisitorDAOImp;
+import com.amit.k2.util.AES;
+import com.amit.k2.util.AppConstants;
+
+public class VisitorServiceImp implements VisitorService {
+
+	private VisitorDAO dao;
+	{
+		dao = new VisitorDAOImp();
+	}
+
+	@Override
+	public String saveVisitor(Visitor visitor) {
+		String encEmail = AES.encrypt(visitor.getEmail(), AppConstants.SECRET_KEY);
+		String encPhone = AES.encrypt(visitor.getPhoneNo(), AppConstants.SECRET_KEY);
+		String encAddress = AES.encrypt(visitor.getAddress(), AppConstants.SECRET_KEY);
+		String encPassword = AES.encrypt(visitor.getPassword(), AppConstants.SECRET_KEY);
+		visitor.setEmail(encEmail);
+		visitor.setPhoneNo(encPhone);
+		visitor.setAddress(encAddress);
+		visitor.setPassword(encPassword);
+		return dao.saveVisitor(visitor);
+	}
+
+	@Override
+	public String updateVisitor(Visitor visitor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Visitor getVisitorById(int id) {
+		Visitor visitorById = dao.getVisitorById(id);
+	    visitorById.setEmail(AES.encrypt(visitorById.getEmail(), AppConstants.SECRET_KEY));
+	    visitorById.setPhoneNo(AES.encrypt(visitorById.getPhoneNo(), AppConstants.SECRET_KEY));
+	    visitorById.setAddress(AES.encrypt(visitorById.getAddress(), AppConstants.SECRET_KEY));
+	    visitorById.setPassword(AES.encrypt(visitorById.getPassword(), AppConstants.SECRET_KEY));
+		return visitorById;
+	}
+
+	@Override
+	public Visitor deleteVisitor(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Visitor visitorLogin(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> getAllRegisteredVisitor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> getAllValidVisitor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Visitor getValidVisitorById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> sortRegisteredVisitorsByName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> sortRegisteredVisitorsByEmail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> sortRegisteredVisitorsByAge() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> sortValidVisitorsByName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> sortValidVisitorsByEmail() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> sortValidVisitorsByAge() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

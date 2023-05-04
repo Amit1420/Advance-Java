@@ -1,0 +1,69 @@
+package com.amit.k2.repository;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.util.List;
+
+import com.amit.k2.dto.Visitor;
+import com.amit.k2.util.ConnectionUtil;
+
+public class VisitorDAOImp implements VisitorDAO{
+
+	@Override
+	public String saveVisitor(Visitor visitor) {
+		String query = "INSERT INTO registered_visitor VALUES(?,?,?,?,?,?,?,?,?)";
+		Connection connection = ConnectionUtil.getConnection();
+		PreparedStatement ps = connection.prepareStatement(query);
+		ps.setInt(1, visitor.getId());
+		ps.setString(2,visitor.getName());
+		ps.setString(3,visitor.getEmail());
+		ps.setString(4,visitor.getPhoneNo());
+		
+		int res = ps.executeUpdate();
+		connection.close();
+		return null;
+	}
+
+	@Override
+	public String updateVisitor(Visitor visitor) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Visitor getVisitorById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Visitor deleteVisitor(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Visitor visitorLogin(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> getAllRegisteredVisitor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Visitor> getAllValidVisitor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Visitor getValidVisitorById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

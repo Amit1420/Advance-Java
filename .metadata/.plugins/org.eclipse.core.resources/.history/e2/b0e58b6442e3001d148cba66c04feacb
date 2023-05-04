@@ -1,0 +1,56 @@
+package com.amit.dynamiccrudoperation;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class StudentDAO {
+	public String saveStudent(Student student) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/m11_e3";
+			String user = "root";
+			String pass = "root";
+			Connection connection = DriverManager.getConnection(url, user, pass);
+			String query="INSERT INTO student VALUES(?,?,?,?)";
+			PreparedStatement ps=connection.prepareStatement(query);
+			
+			ps.setInt(1,student.getId());
+			ps.setString(2,student.getName());
+			ps.setString(3,student.getEmail());
+			ps.setString(4,student.getCourse());
+			int res = ps.executeUpdate();
+			connection.close();
+			return res+" row of data stored";
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	
+	}
+	public String updateStudent(Student student) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/m11_e3";
+			String user = "root";
+			String pass = "root";
+			Connection connection = DriverManager.getConnection(url, user, pass);
+			String query="UPDATE student SET name=?,email=?,course=? where id=?";
+			PreparedStatement ps=connection.prepareStatement(query);
+			ps.setString(1,student.getName());
+			ps.setString(2,student.getEmail());
+			ps.setString(3,student.getCourse());
+			ps.setInt(4, student.getId());
+			int res = ps.executeUpdate();
+			connection.close();
+			return res+" row of data updated";
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+		return null;
+	
+	}
+	
+
+}

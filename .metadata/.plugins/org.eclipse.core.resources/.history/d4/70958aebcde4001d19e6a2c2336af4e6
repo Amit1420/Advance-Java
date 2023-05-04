@@ -1,0 +1,24 @@
+package com.amit.crudoperation;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.util.Properties;
+
+public class TestMultiInsert {
+	public static void main(String[] args) {
+		try {
+			Class.forName("com.mysql.cj.jdbc.Driver");
+			String url = "jdbc:mysql://localhost:3306/m11_e3";
+			FileInputStream stream = new FileInputStream("mydbinfo.properties");
+			Properties pro = new Properties();
+			pro.load(stream);
+			Connection connection = DriverManager.getConnection(url, pro);
+		} catch (ClassNotFoundException | FileNotFoundException | SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
