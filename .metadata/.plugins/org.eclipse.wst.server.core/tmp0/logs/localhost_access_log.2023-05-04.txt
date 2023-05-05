@@ -1,0 +1,9 @@
+127.0.0.1 - - [04/May/2023:12:41:35 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [04/May/2023:12:41:35 +0530] "GET /ServletIntro/save.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/May/2023:12:41:36 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [04/May/2023:12:41:56 +0530] "GET /ServletIntro/save?name=Amit&email=amitkumar80999%40gmail.com+&phone=9973568704 HTTP/1.1" 200 -
+127.0.0.1 - - [04/May/2023:12:57:09 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [04/May/2023:12:57:10 +0530] "GET /ServletIntro/register.html HTTP/1.1" 200 498
+0:0:0:0:0:0:0:1 - - [04/May/2023:12:57:57 +0530] "GET /ServletIntro/save?name=Amit&email=amitkumar80999%40gmail.com+&phone=9973568704&dob=1999-05-09&address=Katghara%2CNawadih%2CBokaro%2CJharkhand HTTP/1.1" 404 772
+0:0:0:0:0:0:0:1 - - [04/May/2023:12:58:25 +0530] "GET /ServletIntro/register.html HTTP/1.1" 200 502
+0:0:0:0:0:0:0:1 - - [04/May/2023:12:59:02 +0530] "GET /ServletIntro/register?name=Amit&email=amitkumar80999%40gmail.com+&phone=9973568704&dob=1999-05-09&address=Katghara%2CNawadih%2CBokaro%2CJharkhand HTTP/1.1" 200 -
