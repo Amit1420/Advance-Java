@@ -25,11 +25,13 @@ public class Login implements Servlet{
 
 	@Override
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+		String userName="Amit1420";
+		String passWord="Amitraaz@123";
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		System.out.println("Login class executed");
 		PrintWriter writer = res.getWriter();
-		if(username.equals("Amit1420")&&password.equals("Amitraaz@123"))
+		if(username.equals(userName)&&password.equals(passWord))
 		{
 			writer.println("<h1>"+"Login successfully"+"</h1>");
 		}

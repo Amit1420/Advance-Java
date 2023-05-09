@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>HomePage</title>
+</head>
+<body>
+<h1>Welcome to Home Page RajKumar</h1>
+<a href="saveStudent.html"> To save new Student data</a><br><br>
+<a href="student">
+</body>
+</html>

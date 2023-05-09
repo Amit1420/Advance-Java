@@ -1,9 +1,0 @@
-package com.amit.k2.controller;
-
-public class Controller {
-	public static void main(String[] args) {
-		
-		
-	}
-
-}

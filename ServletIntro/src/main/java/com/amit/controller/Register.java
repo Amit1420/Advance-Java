@@ -38,6 +38,7 @@ public class Register implements Servlet {
 
 		System.out.println("Register class getting executed");
 		PrintWriter writer = res.getWriter();
+		res.setContentType("text/html");
 		writer.println("<h1>"+"Thank you for registration your data is saved"+"</h1>");
 
 	}

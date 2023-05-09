@@ -70,27 +70,27 @@ public class Controller {
 //		
 //		daoImp.adminLogin("amit","Misti");
 		
-		Visitor visitor = new Visitor();
+//		Visitor visitor = new Visitor();
 //		visitor.setId(1);
-		visitor.setAddress("Bokaro");
-		visitor.setAge(29);
-		visitor.setEmail("ajay80999@gmail.com");
-		visitor.setGender("Male");
-		visitor.setName("Ajay");
-		visitor.setPassword("Ajay@12345");
-		visitor.setPhoneNo("9973858075");
-		visitor.setDob(Date.valueOf("1996-10-10"));
+//		visitor.setAddress("Bokaro");
+//		visitor.setAge(29);
+//		visitor.setEmail("ajay80999@gmail.com");
+//		visitor.setGender("Male");
+//		visitor.setName("Ajay");
+//		visitor.setPassword("Ajay@12345");
+//		visitor.setPhoneNo("9973858075");
+//		visitor.setDob(Date.valueOf("1996-10-10"));
 //		
 //		
 		VisitorDAOImp visitorDAOImp = new VisitorDAOImp();
 	    
-		System.out.println(visitorDAOImp.saveVisitor(visitor));		
-		
-		List<Visitor> list = visitorDAOImp.getAllRegisteredVisitor();
-		if(list!=null)
-			list.forEach(System.out::println);
-		else System.out.println("No visitor data found in DB");	
-		
+//		System.out.println(visitorDAOImp.saveVisitor(visitor));		
+//		
+//		List<Visitor> list = visitorDAOImp.getAllRegisteredVisitor();
+//		if(list!=null)
+//			list.forEach(System.out::println);
+//		else System.out.println("No visitor data found in DB");	
+//		
 		Visitor deleteVisitor = visitorDAOImp.deleteVisitor(1);
 		System.out.println(deleteVisitor);
 //		

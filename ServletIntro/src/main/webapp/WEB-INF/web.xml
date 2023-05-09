@@ -3,10 +3,22 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+<welcome-file-list>
+<welcome-file>studentHome.html</welcome-file>
+</welcome-file-list>
+	<context-param>
+		<param-name>value</param-name>
+		<param-value>data</param-value>
+	</context-param>
+
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
 		<servlet-name>qwerty</servlet-name>
 		<servlet-class>com.amit.controller.Save</servlet-class>
+		<init-param>
+		<param-name>one</param-name>
+		<param-value>Value for save class</param-value>
+		</init-param>
 	</servlet>
 	<servlet>
 		<servlet-name>Register</servlet-name>
