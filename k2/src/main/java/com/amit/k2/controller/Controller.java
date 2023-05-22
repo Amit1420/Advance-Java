@@ -30,7 +30,7 @@ public class Controller {
 //	    			Admin admin = new Admin();
 //	    			admin.setId(1);
 //	    			admin.setUserName("amit1420");
-//	    			admin.setPassword("Misti@143");
+//	    		`	admin.setPassword("Misti@143");
 //	    		    AdminDAOImp daoImp = new AdminDAOImp();
 //	    			daoImp.saveAdmin(admin);
 //	    			System.out.println("***************** Admin Login ***************");
@@ -86,13 +86,13 @@ public class Controller {
 	    
 //		System.out.println(visitorDAOImp.saveVisitor(visitor));		
 //		
-//		List<Visitor> list = visitorDAOImp.getAllRegisteredVisitor();
-//		if(list!=null)
-//			list.forEach(System.out::println);
-//		else System.out.println("No visitor data found in DB");	
+		List<Visitor> list = visitorDAOImp.getAllRegisteredVisitor();
+		if(list!=null)
+			list.forEach(System.out::println);
+		else System.out.println("No visitor data found in DB");	
 //		
-		Visitor deleteVisitor = visitorDAOImp.deleteVisitor(1);
-		System.out.println(deleteVisitor);
+//		Visitor deleteVisitor = visitorDAOImp.deleteVisitor(1);
+//		System.out.println(deleteVisitor);
 //		
 //	    visitorDAOImp.visitorLogin("amitkumar80999@gmail.com","Amit@123");
 //	    

@@ -9,6 +9,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
+import com.amit.studentdata.dto.Student;
+
 public class Save extends GenericServlet {
 
 
@@ -20,6 +22,7 @@ public class Save extends GenericServlet {
 	  String phone = req.getParameter("phone");
 	  ServletContext servletContext = getServletContext();
 	  String parameter = servletContext.getInitParameter("value");
+	  servletContext.setAttribute("stu",new Student());
 	  String parameter2 = getServletConfig().getInitParameter("one");
 	  
 	  

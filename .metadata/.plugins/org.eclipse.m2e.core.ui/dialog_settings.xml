@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\eclipse JEE\JEE-workspace\ServletIntro2\src\main\webapp\WEB-INF\web.xml"/>
+			<item value="D:\eclipse JEE\JEE-workspace\ServletIntro"/>
 			<item value="D:\eclipse JEE\JEE-workspace\k2\src\main\java\com\amit\k2\util\ConnectionUtil.java"/>
 			<item value="D:\eclipse JEE\JEE-workspace\JDBCFirst\src\com\amit\dynamiccrudoperation\StudentDAO.java"/>
 		</list>
@@ -27,13 +29,15 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.amit.servletintro"/>
+			<item value="com.amit.ServletProject"/>
+			<item value="com.amit.servletIntro2"/>
 		</list>
 		<list key="groupId">
 			<item value="com.amit"/>
 		</list>
 		<list key="artifactId">
-			<item value="ServletIntro"/>
+			<item value="ServletProject"/>
+			<item value="ServletIntro2"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

@@ -1,9 +1,0 @@
-package com.amit.controller;
-
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-@WebServlet("/login2")
-public class Login2 extends HttpServlet{
-
-
-}

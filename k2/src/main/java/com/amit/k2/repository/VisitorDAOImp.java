@@ -132,48 +132,48 @@ public class VisitorDAOImp implements VisitorDAO {
 
 	@Override
 	public Visitor deleteVisitor(int id) {
-	    Connection connection;
-	    try {
-	        Visitor visitor = getVisitorById(id);
-	        if (visitor != null) {
-	            String query = "DELETE FROM registered_visitor WHERE id=?";
-	            connection = ConnectionUtil.getConnection();
-	            PreparedStatement ps = connection.prepareStatement(query);
-	            ps.setInt(1, id);
-	            int res = ps.executeUpdate();
-	            
-	            if (res > 0) {
-	                // Delete corresponding data from valid_visitor table
-	                deleteValidVisitor(visitor.getName(), visitor.getEmail());
-	                
-	                connection.close();
-	                return visitor;
-	            }
-	            connection.close();
-	        }
-	    } catch (ClassNotFoundException | SQLException | IOException e) {
-	        e.printStackTrace();
-	    }
-	    return null;
+		Connection connection;
+		try {
+			Visitor visitor = getVisitorById(id);
+			if (visitor != null) {
+				String query = "DELETE FROM registered_visitor WHERE id=?";
+				connection = ConnectionUtil.getConnection();
+				PreparedStatement ps = connection.prepareStatement(query);
+				ps.setInt(1, id);
+				int res = ps.executeUpdate();
+
+				if (res > 0) {
+					// Delete corresponding data from valid_visitor table
+					deleteValidVisitor(visitor.getName(), visitor.getEmail());
+
+					connection.close();
+					return visitor;
+				}
+				connection.close();
+			}
+		} catch (ClassNotFoundException | SQLException | IOException e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 	private boolean deleteValidVisitor(String name, String email) {
-	    Connection connection;
-	    try {
-	        String query = "DELETE FROM valid_visitor WHERE name=? AND email=?";
-	        connection = ConnectionUtil.getConnection();
-	        PreparedStatement ps = connection.prepareStatement(query);
-	        ps.setString(1, name);
-	        ps.setString(2, email);
-	        int res = ps.executeUpdate();
+		Connection connection;
+		try {
+			String query = "DELETE FROM valid_visitor WHERE name=? AND email=?";
+			connection = ConnectionUtil.getConnection();
+			PreparedStatement ps = connection.prepareStatement(query);
+			ps.setString(1, name);
+			ps.setString(2, email);
+			int res = ps.executeUpdate();
 
-	        connection.close();
+			connection.close();
 
-	        return res > 0;
-	    } catch (ClassNotFoundException | SQLException | IOException e) {
-	        e.printStackTrace();
-	    }
-	    return false;
+			return res > 0;
+		} catch (ClassNotFoundException | SQLException | IOException e) {
+			e.printStackTrace();
+		}
+		return false;
 	}
 
 	@Override
