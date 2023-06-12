@@ -29,6 +29,9 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.amit.demohibernate"/>
+			<item value="com.amit.hibernateproject1"/>
+			<item value="com.amit.admindatamanagement"/>
 			<item value="com.amit.ServletProject"/>
 			<item value="com.amit.servletIntro2"/>
 		</list>
@@ -36,6 +39,9 @@
 			<item value="com.amit"/>
 		</list>
 		<list key="artifactId">
+			<item value="DemoHibernate"/>
+			<item value="HibernateProject1"/>
+			<item value="AdminDataManagement"/>
 			<item value="ServletProject"/>
 			<item value="ServletIntro2"/>
 		</list>
