@@ -2,6 +2,10 @@ package com.amit.passwordlocker.repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
+
+import javax.persistence.TypedQuery;
+
 import com.amit.passwordlocker.entity.UserDetails;
 import com.amit.passwordlocker.util.UserEntityManagerFactoryUtil;
 
@@ -28,10 +32,16 @@ public class UserRepositoryImpl implements UserRepository {
 	}
 
 	@Override
-	public UserDetails userLogin(String email, String password) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+    public UserDetails userLogin(String email, String password) {
+        TypedQuery<UserDetails> query = manager.createQuery("SELECT u FROM UserDetails u WHERE u.email = :email AND u.password = :password", UserDetails.class);
+        query.setParameter("email", email);
+        query.setParameter("password", password);
+        try {
+            return query.getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
 	@Override
 	public String deleteUser(int id) {
